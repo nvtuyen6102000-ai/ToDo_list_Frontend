@@ -37,11 +37,9 @@ export default function DashboardPage() {
         <span className="text-xl font-bold tracking-tight">Trello</span>
         <div className="flex items-center gap-3">
           <span className="text-sm">{user?.name}</span>
-          <div className="w-8 h-8 rounded-full bg-blue-400 flex items-center justify-center text-sm font-bold">
+          <button onClick={() => navigate('/profile')} title="Xem hồ sơ"
+            className="w-8 h-8 rounded-full bg-blue-400 hover:bg-blue-300 flex items-center justify-center text-sm font-bold transition">
             {user?.name?.[0]?.toUpperCase()}
-          </div>
-          <button onClick={logout} className="text-sm bg-blue-600 hover:bg-blue-500 px-3 py-1.5 rounded-lg transition">
-            Đăng xuất
           </button>
         </div>
       </header>
